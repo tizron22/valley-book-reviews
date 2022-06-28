@@ -65,16 +65,16 @@
 
 ### Wireframes
 
-> - [Base Web Page Wireframe](./assets/wireframes/base-web.pdf)
-> - [Base Mobile Page Wireframe](./assets/wireframes/base-mobile.pdf)
-> - [Base Web Menus Page Wireframe](./assets/wireframes/base-web-menus.pdf)
-> - [Base Mobile Menus Page Wireframe](./assets/wireframes/base-mobile-menus.pdf)
-> - [Home Content Page Wireframe](./assets/wireframes/home-content.pdf)
-> - [About Content Page Wireframe](./assets/wireframes/about-content.pdf)
-> - [My Reviews Content Page Wireframe](./assets/wireframes/my-reviews-content.pdf)
-> - [All Reviews Content Page Wireframe](./assets/wireframes/all-reviews-content.pdf)
-> - [My Account Content Page Wireframe](./assets/wireframes/my-account-content.pdf)
-> - [My Account Register Content Page Wireframe](./assets/wireframes/my-account-register-content.pdf)
+> - [Base Web Page Wireframe](./static/wireframes/base-web.pdf)
+> - [Base Mobile Page Wireframe](./static/wireframes/base-mobile.pdf)
+> - [Base Web Menus Page Wireframe](./static/wireframes/base-web-menus.pdf)
+> - [Base Mobile Menus Page Wireframe](./static/wireframes/base-mobile-menus.pdf)
+> - [Home Content Page Wireframe](./static/wireframes/home-content.pdf)
+> - [About Content Page Wireframe](./static/wireframes/about-content.pdf)
+> - [My Reviews Content Page Wireframe](./static/wireframes/my-reviews-content.pdf)
+> - [All Reviews Content Page Wireframe](./static/wireframes/all-reviews-content.pdf)
+> - [My Account Content Page Wireframe](./static/wireframes/my-account-content.pdf)
+> - [My Account Register Content Page Wireframe](./static/wireframes/my-account-register-content.pdf)
 
 ## Surface
 
