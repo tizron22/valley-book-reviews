@@ -44,9 +44,12 @@
 
 > #### **Site Owner**
 
-1. ``
-
 ### User Stories
+
+1. `As a potential new user, I would like the site to be easily usable, understandable and user friendly.`
+2. `As a new user, I would like to be able to register an account to be able to use the site.`
+3. `As a current user, I would like to be able to submit new and vote on exisiting reviews on the site.`
+4. `As a returning user, I would like to be able to edit or delete previous reviews that I submitted on the site.`
 
 ---
 
