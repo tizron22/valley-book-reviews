@@ -123,6 +123,14 @@
 
 ## Credits
 
+### Code Snippets
+
+> #### Side Bar
+>
+> Sample code used from bootstrap website as the template for this website, the code was adapted to suit needs credit for the code is from bootstrap.
+>
+> - [Get Bootstrap Side Bars Example](https://getbootstrap.com/docs/5.0/examples/sidebars/)
+
 ---
 
 # Acknowledgements
