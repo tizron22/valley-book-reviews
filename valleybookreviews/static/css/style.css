@@ -10,6 +10,11 @@
     font-size: 25px;
 }
 
+.nav-icons:hover{
+    background-color: grey;
+    transform: scale(0.7);
+}
+
 .side-bar{
     width: 280px;
     min-height: 95vh;
@@ -22,4 +27,27 @@
     width: 45px;
     height: 45px;
     font-size: 30px;
+}
+
+.side-bar-cross:hover{
+    background-color: grey;
+    transform: scale(0.7);
+}
+
+/* Footer */
+
+.facebook-bg{
+    background-color: #3b5998;
+}
+
+.twitter-bg{
+    background-color: #55acee;
+}
+
+.instagram-bg{
+    background-color: #ac2bac;;
+}
+
+.github-bg{
+    background-color: #333333;
 }
