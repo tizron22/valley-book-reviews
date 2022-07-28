@@ -2,9 +2,10 @@ import os
 import re
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
+
 if os.path.exists("env.py"):
     import env  # noqa
-
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
@@ -19,5 +20,6 @@ else:
 
 
 db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
 
 from valleybookreviews import routes  # noqa
