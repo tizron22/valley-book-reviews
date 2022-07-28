@@ -133,6 +133,12 @@
 >
 > - [Get Bootstrap Side Bars Example](https://getbootstrap.com/docs/5.0/examples/sidebars/)
 
+> #### Login & Registering
+>
+> Some ideas and thought process's from `Arpan Neupane` YouTube channel on how to create flask authentication was used in this project.
+>
+> - [Python Flask Authentication Tutorial - Learn Flask Login](https://www.youtube.com/watch?v=71EU8gnZqZQ)
+
 ---
 
 # Acknowledgements
