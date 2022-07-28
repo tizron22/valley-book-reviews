@@ -2,6 +2,8 @@
 
 ---
 
+[Click here to view website on Heroku](https://valley-book-reviews.herokuapp.com/)
+
 ---
 
 ## Table Contents
