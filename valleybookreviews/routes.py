@@ -1,9 +1,21 @@
+from crypt import methods
+import re
 from flask import render_template, request, redirect, url_for
-from valleybookreviews import app, db, bcrypt
+from valleybookreviews import app, db, bcrypt, login_user, LoginManager, login_required, logout_user, current_user
 from valleybookreviews.models import Users
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
+
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Users.query.get(int(user_id))
 
 
 class register_form(FlaskForm):
@@ -62,4 +74,17 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = login_form()
+    if form.validate_on_submit():
+        user_account = Users.query.filter_by(
+            user_name=form.username.data).first()
+        if user_account:
+            if bcrypt.check_password_hash(user_account.password, form.currentpassword.data):
+                login_user(user_account)
+                return redirect(url_for("myreviews"))
     return render_template("login.html", form=form)
+
+
+@app.route("/myreviews", methods=["GET", "POST"])
+@login_required
+def myreviews():
+    return render_template("myreviews.html")
