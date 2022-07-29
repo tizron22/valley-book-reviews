@@ -34,7 +34,9 @@
                 </div>
             </div>
         </nav>
+    </header>
 
+    <section>
         <!-- Side bar -->
         <div id="sideBar" class="d-none flex-column flex-shrink-0 p-3 text-white bg-dark side-bar">
             <div id="openSidebarCross" class="d-flex justify-content-end">
@@ -63,11 +65,11 @@
                 </li>
             </ul>
         </div>
-    </header>
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
+    </section>
 
     <footer class="bg-light text-center text-white">
         <div class="mb-4">
