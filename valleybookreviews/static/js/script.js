@@ -37,3 +37,12 @@ hamburgerSelector.addEventListener("click", () => {
   const sideBarMenu = document.querySelector("#sideBar");
   hamburgerMenu(sideBarMenu);
 });
+
+/**
+ * This will close the sidebar when the cross at the top is clicked.
+ */
+const sideBarCross = document.querySelector("#openSidebarCross");
+sideBarCross.addEventListener("click", () => {
+  const sideBarMenu = document.querySelector("#sideBar");
+  hideSideBar(sideBarMenu);
+});
