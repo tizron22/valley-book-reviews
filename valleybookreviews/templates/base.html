@@ -29,14 +29,20 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <h1>Valley Book Review</h1>
-                <div class="nav-icons">
+                <div id="myAccountSelector" class="nav-icons">
                     <i class="fa-solid fa-user"></i>
                 </div>
+            </div>
+            <div id="accountMenu" class="d-none">
+                <ul class="bg-secondary text-dark">
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
-    <section>
+    <section class="d-flex">
         <!-- Side bar -->
         <div id="sideBar" class="d-none flex-column flex-shrink-0 p-3 text-white bg-dark side-bar">
             <div id="openSidebarCross" class="d-flex justify-content-end">
@@ -54,7 +60,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{ url_for('myreviews') }}" class="nav-link text-white">
                         My Reviews
                     </a>
                 </li>
