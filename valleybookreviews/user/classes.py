@@ -1,15 +1,13 @@
 
 import re
 
+from flask import redirect, session, url_for
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
-from flask_bcrypt import Bcrypt
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Length, ValidationError
 
 
 # from valleybookreviews import sql_db
 from valleybookreviews.user.models import Users
+from valleybookreviews.factory.initialisation import postgresql_db, bcrypt
 
 
 class UserDetails(UserMixin):
@@ -17,35 +15,34 @@ class UserDetails(UserMixin):
     def __init__(self, user_name):
         self.user_name
 
-    def __repr__(self):
+    def get_user(self):
         return self.user_name
 
-    def register_form(FlaskForm):
-        username = StringField(validators=[InputRequired(), Length(
-            min=4, max=25)], render_kw={"placeholder": "Username"})
-        firstname = StringField(validators=[InputRequired(), Length(
-            min=1, max=50)], render_kw={"placeholder": "First Name"})
-        lastname = StringField(validators=[InputRequired(), Length(
-            min=1, max=100)], render_kw={"placeholder": "Last Name"})
-        emailaddress = StringField(validators=[InputRequired(), Length(
-            min=1, max=150)], render_kw={"placeholder": "Email Address"})
-        newpassword = PasswordField(validators=[InputRequired(), Length(
-            min=1, max=20)], render_kw={"placeholder": "Password"})
+    def query_user(user_name):
+        return Users.query.filter_by(user_name=user_name).first()
 
-        submit = SubmitField("Register")
+    def hash_password(password):
+        """
+            This function will Hash any password that is provided.
+        """
+        return bcrypt.generate_password_hash(password).decode("utf-8", "ignore")
+
+    def register_user_account(username, firstname, lastname, emailaddress, hashed_password):
+        new_account = Users(user_name=username.data,
+                            first_name=firstname.data,
+                            last_name=lastname.data,
+                            email=emailaddress.data,
+                            password=hashed_password.data
+                            )
+        postgresql_db.session.add(new_account)
+        postgresql_db.session.commit()
 
     def validate_new_user(self, username):
         existing_user = Users.query.filter_by(user_name=username.data).first()
         if existing_user:
-            raise ValidationError(
+            print(
                 "Sorry, that Username has already been taken. Please try a different one!")
 
-    def login_form(FlaskForm):
-        username = StringField(validators=[InputRequired(), Length(
-            min=4, max=25)], render_kw={"placeholder": "Username"})
-        currentpassword = PasswordField(validators=[InputRequired(), Length(
-            min=1, max=20)], render_kw={"placeholder": "Password"})
-
-        submit = SubmitField("Login")
-
-        return
+    def login_user_account(username, submited_password):
+        if bcrypt.check_password_hash(username.password, submited_password):
+            login_user(username)
