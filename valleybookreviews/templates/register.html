@@ -4,7 +4,32 @@
 <h1>The Register Page</h1>
 
 <form method="POST" action="">
+    <div>
+        <input id="userID" type="text" name="userID" required>
+        <label for="userID">Username</label>
+    </div>
+    <div>
+        <input id="firstName" type="text" name="firstName" required>
+        <label for="firstName">First Name</label>
+    </div>
+    <div>
+        <input id="lastName" type="text" name="lastName" required>
+        <label for="lastName">Last Name</label>
+    </div>
+    <div>
+        <input id="emailAddress" type="email" name="emailAddress" required>
+        <label for="emailAddress">Email Address</label>
+    </div>
+    <div>
+        <input id="userPassword" type="password" name="userPassword" required>
+        <label for="userPassword">Password</label>
+    </div>
+    <div>
+        <input id="confirmUserPassword" type="password" name="confirmUserPassword" required>
+        <label for="confirmUserPassword">Confirm Password</label>
+    </div>
 
+    <button class="loginButton" type="submit" name="action">Register</button>
 
 </form>
 
