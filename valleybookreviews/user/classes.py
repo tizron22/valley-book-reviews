@@ -28,20 +28,14 @@ class UserDetails(UserMixin):
         return bcrypt.generate_password_hash(password).decode("utf-8", "ignore")
 
     def register_user_account(username, firstname, lastname, emailaddress, hashed_password):
-        new_account = Users(user_name=username.data,
-                            first_name=firstname.data,
-                            last_name=lastname.data,
-                            email=emailaddress.data,
-                            password=hashed_password.data
+        new_account = Users(user_name=username,
+                            first_name=firstname,
+                            last_name=lastname,
+                            email=emailaddress,
+                            password=hashed_password
                             )
         postgresql_db.session.add(new_account)
         postgresql_db.session.commit()
-
-    def validate_new_user(self, username):
-        existing_user = Users.query.filter_by(user_name=username.data).first()
-        if existing_user:
-            print(
-                "Sorry, that Username has already been taken. Please try a different one!")
 
     def login_user_account(username, submited_password):
         if bcrypt.check_password_hash(username.password, submited_password):
