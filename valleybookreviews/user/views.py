@@ -28,6 +28,24 @@ def load_user(username):
 @user_accounts.route("/register", methods=["GET", "POST"])
 def register():
 
+    if request.method == "POST":
+        user_id = request.form.get("userID").lower()
+        first_name = request.form.get("firstName").title()
+        last_name = request.form.get("lastName").title()
+        email_address = request.form.get("emailAddress").lower()
+        submited_password = request.form.get("userPassword")
+
+        user_account_exist = UserDetails.query_user(user_id)
+        if user_account_exist:
+            print(
+                "Sorry, that Username has already been taken. Please try a different one!")
+        else:
+            hash_submited_password = UserDetails.hash_password(
+                submited_password)
+            UserDetails.register_user_account(
+                user_id, first_name, last_name, email_address, hash_submited_password)
+            return redirect("login")
+
     return render_template("register.html")
 
 
