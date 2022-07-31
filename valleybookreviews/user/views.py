@@ -5,7 +5,7 @@
 # from crypt import methods
 # import re
 
-from flask import render_template, Blueprint, request, redirect, url_for, session
+from flask import render_template, Blueprint, request, redirect, url_for
 from flask_login import LoginManager, login_required, logout_user, current_user, login_user
 from valleybookreviews.user.classes import UserDetails
 
@@ -34,18 +34,21 @@ def register():
 @user_accounts.route("/login", methods=["GET", "POST"])
 def login():
 
+    if request.method == "POST":
+        user_name = request.form.get("userLogin").lower()
+        submited_password = request.form.get("userpassword")
+
+        registered_user_account = UserDetails.query_user(user_name)
+        if registered_user_account:
+            UserDetails.login_user_account(
+                registered_user_account, submited_password)
+            return redirect("myreviews")
+
     return render_template("login.html")
 
 
-@user_accounts.route("/myreviews", methods=["GET", "POST"])
-@login_required
-def myreviews():
-
-    return render_template("myreviews.html")
-
-
-@user_accounts.route("/logout", methods=["GET", "POST"])
+@user_accounts.route("/logout")
 @login_required
 def logout():
     logout_user()
-    return redirect(url)
+    return redirect("login")
