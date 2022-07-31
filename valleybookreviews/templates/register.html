@@ -1,17 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h1>The Register Page</h1>
+
 <form method="POST" action="">
-    {{ form.hidden_tag() }}
-    {{ form.username }}
-    {{ form.firstname }}
-    {{ form.lastname }}
-    {{ form.emailaddress }}
-    {{ form.newpassword }}
-    {{ form.submit }}
+
 
 </form>
 
-<a href="{{ url_for('login') }}">Already have an account? Click here to login.</a>
 
 {% endblock %}

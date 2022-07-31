@@ -1,3 +1,13 @@
+"""
+------------------------------
+Valley Book Reviews run.py
+------------------------------
+This module start the whole code running from the __init__.py file,
+in the valleybookreviews folder. 
+
+"""
+
+
 import os
 from valleybookreviews import app
 

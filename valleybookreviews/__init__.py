@@ -1,27 +1,14 @@
-import os
-import re
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
-from flask_bcrypt import Bcrypt
-from datetime import datetime
 
-if os.path.exists("env.py"):
-    import env  # noqa
+from valleybookreviews.factory.initialisation import create_app
+from valleybookreviews.user.views import user_accounts, login_manager
 
-app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+# Creates App via Flask Application Factory
+app = create_app()
 
-if os.environ.get("DEVELOPMENT") == "True":
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")  # local
-else:
-    uri = os.environ.get("DATABASE_URL")
-    if uri.startswith("postgres://"):
-        uri = uri.replace("postgres://", "postgresql://", 1)
-    app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
+# Register the Blueprints to FLask
+app.register_blueprint(user_accounts)
 
 
-db = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
-
-from valleybookreviews import routes  # noqa
+# Sets Up the Login Manager
+login_manager.init_app(app)
+login_manager.login_view = 'login'
