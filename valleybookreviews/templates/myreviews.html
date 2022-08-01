@@ -3,4 +3,27 @@
 
 <h1>You are logged in!!! Whoop Whoop</h1>
 
+<form method="POST" action="" id="myReviewForm">
+    <div>
+        <input id="bookName" type="text" name="bookName" placeholder="Book Name" required>
+        <label for="bookName">Book Name</label>
+    </div>
+    <div>
+        <input id="authorName" type="text" name="authorName" placeholder="Author Name" required>
+        <label for="authorName">Author Name</label>
+    </div>
+    <div>
+        <input id="imageLink" type="hyperlink" name="imageLink" placeholder="Book Cover Image" required>
+        <label for="imageLink">Cover Image Hyperlink</label>
+    </div>
+    <div>
+        <textarea rows="4" cols="50" id="reviewText" name="reviewText" form="myReviewForm"
+            placeholder="Please Enter Review here..."></textarea>
+        <label for="reviewText">Review</label>
+    </div>
+
+    <button class="loginButton" type="submit" name="action">Submit Review</button>
+
+</form>
+
 {% endblock %}
