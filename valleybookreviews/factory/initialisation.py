@@ -38,24 +38,26 @@ def create_app():
     app = Flask(__name__)
 
     # Config
+    app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
     app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
     if os.environ.get("DEVELOPMENT") == "True":
         app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
             "DB_URL")  # local
     else:
-        uri = os.environ.get("DATABASE_URL")
-        if uri.startswith("postgres://"):
-            uri = uri.replace("postgres://", "postgresql://", 1)
-            app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
+        postgres_uri = os.environ.get("DATABASE_URL")
+        if postgres_uri.startswith("postgres://"):
+            postgres_uri = postgres_uri.replace(
+                "postgres://", "postgresql://", 1)
+            app.config["SQLALCHEMY_DATABASE_URI"] = postgres_uri  # heroku
 
     app.template_folder = os.path.abspath("valleybookreviews/templates")
     app.secret_key = os.environ.get("SECRET_KEY")
     app.static_folder = os.path.abspath("valleybookreviews/static")
 
     # Initialise SQL Alchemy, mongodb and bcrypt for password hashing.
-    mongo_db = PyMongo(app)
-    postgresql_db = SQLAlchemy(app)
-    bcrypt = Bcrypt(app)
+    mongo_db.init_app(app)
+    postgresql_db.init_app(app)
+    bcrypt.init_app(app)
 
     return app
