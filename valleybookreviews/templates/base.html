@@ -35,8 +35,12 @@
             </div>
             <div id="accountMenu" class="d-none">
                 <ul class="bg-secondary text-dark">
+                    {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('user_accounts.logout') }}">Logout</a></li>
+                    {% else %}
                     <li><a href="{{ url_for('user_accounts.login') }}">Login</a></li>
                     <li><a href="{{ url_for('user_accounts.register') }}">Register</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -61,9 +65,11 @@
                     </a>
                 </li>
                 <li>
+                    {% if current_user.is_authenticated %}
                     <a href="{{ url_for('user_reviews.myreviews') }}" class="nav-link text-white">
                         My Reviews
                     </a>
+                    {% endif %}
                 </li>
                 <li>
                     <a href="#" class="nav-link text-white">
