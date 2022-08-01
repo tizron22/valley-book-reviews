@@ -21,4 +21,7 @@ def myreviews():
         new_review.add_user_review()
         return redirect(url_for("user_reviews.myreviews"))
 
-    return render_template("myreviews.html")
+    submited_user_reviews = UserReviews.get_user_reviews(
+        current_user.user_name)
+
+    return render_template("myreviews.html", submited_user_reviews=submited_user_reviews)
