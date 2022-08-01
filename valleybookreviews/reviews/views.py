@@ -19,6 +19,6 @@ def myreviews():
             review_text=request.form.get("reviewText")
         )
         new_review.add_user_review()
-        # return redirect("myreview")
+        return redirect(url_for("user_reviews.myreviews"))
 
     return render_template("myreviews.html")
