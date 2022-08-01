@@ -39,3 +39,17 @@ class UserReviews():
 
     def add_user_review(self):
         mongo_db.db.reviews.insert_one(self.get_db_info())
+
+    def delete_user_review(_id):
+        if ObjectId.is_valid(_id):
+            mongo_db.db.reviews.delete_one({"_id": ObjectId(_id)})
+
+    def edit_user_review(self, book_name, author_name, image_link, review_text):
+
+        self.book_name = book_name
+        self.author_name = author_name
+        self.image_link = image_link
+        self.review_text = review_text
+
+        mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
+                                       "$set": self.get_db_info()})
