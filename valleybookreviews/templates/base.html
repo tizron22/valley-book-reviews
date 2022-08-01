@@ -35,14 +35,15 @@
             </div>
             <div id="accountMenu" class="d-none">
                 <ul class="bg-secondary text-dark">
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
+                    <li><a href="{{ url_for('user_accounts.login') }}">Login</a></li>
+                    <li><a href="{{ url_for('user_accounts.register') }}">Register</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="d-flex">
+    <section>
+
         <!-- Side bar -->
         <div id="sideBar" class="d-none flex-column flex-shrink-0 p-3 text-white bg-dark side-bar">
             <div id="openSidebarCross" class="d-flex justify-content-end">
@@ -60,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="" class="nav-link text-white">
+                    <a href="{{ url_for('user_reviews.myreviews') }}" class="nav-link text-white">
                         My Reviews
                     </a>
                 </li>
@@ -71,11 +72,11 @@
                 </li>
             </ul>
         </div>
-
-        {% block content %}
-        {% endblock %}
-
     </section>
+
+    {% block content %}
+    {% endblock %}
+
 
     <footer class="bg-light text-center text-white">
         <div class="mb-4">

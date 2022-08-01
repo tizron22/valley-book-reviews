@@ -1,29 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>You are logged in!!! Whoop Whoop</h1>
-
-<form method="POST" action="" id="myReviewForm">
-    <div>
-        <input id="bookName" type="text" name="bookName" placeholder="Book Name" required>
-        <label for="bookName">Book Name</label>
+<!-- My Review input elements -->
+<section class="d-flex justify-content-around">
+    <div class="container d-flex justify-content-center justify-content-around m-1 p-2 border border-secondary rounded">
+        <form method="POST" action="" id="myReviewForm">
+            <div class="row">
+                <div class="d-flex flex-column col-sm m-0">
+                    <div class="d-flex flex-column justify-content-around">
+                        <label for="bookName">Book Name</label>
+                        <input id="bookName" type="text" name="bookName" placeholder="Book Name" required>
+                    </div>
+                    <div class="d-flex flex-column justify-content-around>
+                    <label for=" authorName">Author Name</label>
+                        <input id="authorName" type="text" name="authorName" placeholder="Author Name" required>
+                    </div>
+                    <div class="d-flex flex-column justify-content-around>
+                    <label for=" imageLink">Cover Image Hyperlink</label>
+                        <input id="imageLink" type="hyperlink" name="imageLink" placeholder="Book Cover Image" required>
+                    </div>
+                </div>
+                <div class="d-flex col-sm align-items-center m-1 p-2.5">
+                    <div>
+                        <textarea rows="5" cols="38" id="reviewText" name="reviewText" form="myReviewForm"
+                            placeholder="Please Enter Review here..." required></textarea>
+                    </div>
+                </div>
+                <div class="col-sm d-flex justify-content-center align-items-center">
+                    <button class="loginButton" type="submit" name="action">Submit Review</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <div>
-        <input id="authorName" type="text" name="authorName" placeholder="Author Name" required>
-        <label for="authorName">Author Name</label>
-    </div>
-    <div>
-        <input id="imageLink" type="hyperlink" name="imageLink" placeholder="Book Cover Image" required>
-        <label for="imageLink">Cover Image Hyperlink</label>
-    </div>
-    <div>
-        <textarea rows="4" cols="50" id="reviewText" name="reviewText" form="myReviewForm"
-            placeholder="Please Enter Review here..."></textarea>
-        <label for="reviewText">Review</label>
-    </div>
-
-    <button class="loginButton" type="submit" name="action">Submit Review</button>
-
-</form>
+</section>
 
 {% endblock %}
