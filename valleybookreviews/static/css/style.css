@@ -51,6 +51,11 @@ nav ul{
     transform: scale(0.7);
 }
 
+.book-image{
+    height: 250px;
+    width: auto;
+}
+
 /* Footer */
 
 .facebook-bg{
