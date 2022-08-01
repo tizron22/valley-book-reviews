@@ -53,3 +53,16 @@ class UserReviews():
 
         mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
                                        "$set": self.get_db_info()})
+
+    @classmethod
+    def get_user_reviews(cls, user_name):
+        reviews = list(mongo_db.db.reviews.find({"user_id": user_name}))
+
+        returned_reviews = []
+
+        if reviews is not None:
+
+            for review in reviews:
+                returned_reviews.append(cls(**review))
+
+        return returned_reviews
