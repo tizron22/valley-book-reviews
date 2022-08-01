@@ -25,3 +25,12 @@ def myreviews():
         current_user.user_name)
 
     return render_template("myreviews.html", submited_user_reviews=submited_user_reviews)
+
+
+@user_reviews.route("/delete_review/<review_id>", methods=["GET", "POST"])
+@login_required
+def delete_review(review_id):
+
+    if request.method == "POST":
+        UserReviews.delete_user_review(review_id)
+        return redirect(url_for("user_reviews.myreviews"))
