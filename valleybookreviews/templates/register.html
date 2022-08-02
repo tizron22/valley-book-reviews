@@ -1,37 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>The Register Page</h1>
-
-<form method="POST" action="">
-    <div>
-        <input id="userID" type="text" name="userID" required>
-        <label for="userID">Username</label>
+<section class="library_hero_image d-flex">
+    <div class="container my-4 border rounded bg-light">
+        <h1 class="d-flex justify-content-around my-4 text-center">Enter the details below to register</h1>
+        <form method="POST" action=""
+            class="register-form container my-4 bg-secondary bg-opacity-50 border border-secondary rounded">
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="userID" class="fw-semibold">Username:</label>
+                <input id="userID" type="text" name="userID" required>
+            </div>
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="firstName" class="fw-semibold">First Name:</label>
+                <input id="firstName" type="text" name="firstName" required>
+            </div>
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="lastName" class="fw-semibold">Last Name:</label>
+                <input id="lastName" type="text" name="lastName" required>
+            </div>
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="emailAddress" class="fw-semibold">Email Address:</label>
+                <input id="emailAddress" type="email" name="emailAddress" required>
+            </div>
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="userPassword" class="fw-semibold">Password:</label>
+                <input id="userPassword" type="password" name="userPassword" required>
+            </div>
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="confirmUserPassword" class="fw-semibold">Confirm Password:</label>
+                <input id="confirmUserPassword" type="password" name="confirmUserPassword" required>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="loginButton btn btn-success" type="submit" name="action">Register</button>
+            </div>
+            <div class="p-1 m-2">
+                <a href="{{ url_for('user_accounts.login') }}"
+                    class="d-flex fw-md-semibold text-center flex-wrap justify-content-center align-items-center">Already
+                    registed, click here to login.</a>
+            </div>
+        </form>
     </div>
-    <div>
-        <input id="firstName" type="text" name="firstName" required>
-        <label for="firstName">First Name</label>
-    </div>
-    <div>
-        <input id="lastName" type="text" name="lastName" required>
-        <label for="lastName">Last Name</label>
-    </div>
-    <div>
-        <input id="emailAddress" type="email" name="emailAddress" required>
-        <label for="emailAddress">Email Address</label>
-    </div>
-    <div>
-        <input id="userPassword" type="password" name="userPassword" required>
-        <label for="userPassword">Password</label>
-    </div>
-    <div>
-        <input id="confirmUserPassword" type="password" name="confirmUserPassword" required>
-        <label for="confirmUserPassword">Confirm Password</label>
-    </div>
-
-    <button class="loginButton" type="submit" name="action">Register</button>
-
-</form>
-
+</section>
 
 {% endblock %}
