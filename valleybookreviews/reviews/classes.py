@@ -19,6 +19,7 @@ class UserReviews():
         self.review_dislikes_users = review_dislikes_users if review_dislikes_users else []
         self.review_dislikes_count = review_dislikes_count if review_dislikes_count else 0
 
+    @property
     def get_review_id(self):
         return self._id
 
@@ -81,6 +82,18 @@ class UserReviews():
 
         return returned_reviews
 
+    @classmethod
+    def get_reviews_id(cls, _id):
+
+        if ObjectId.is_valid(_id):
+            returned_review = mongo_db.db.reviews.find_one(
+                {"_id": ObjectId(_id)})
+            if returned_review is not None:
+                return cls(**returned_review)
+
+        returned_review = False
+        return returned_review
+
     def add_review_like(self, user_id):
 
         self.review_likes_users.append(user_id)
@@ -95,16 +108,16 @@ class UserReviews():
         mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
                                        "$set": self.get_db_info()})
 
-    def remove_review_like(self, user_id):
+    def remove_review_like(self, like_index):
 
-        self.review_likes_users.pop(user_id)
+        self.review_likes_users.pop(like_index)
         self.review_likes_count += -1
         mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
                                        "$set": self.get_db_info()})
 
-    def remove_review_dislike(self, user_id):
+    def remove_review_dislike(self, dislike_index):
 
-        self.review_dislikes_users.pop(user_id)
+        self.review_dislikes_users.pop(dislike_index)
         self.review_dislikes_count += -1
         mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
                                        "$set": self.get_db_info()})
