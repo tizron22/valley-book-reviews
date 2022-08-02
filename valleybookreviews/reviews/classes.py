@@ -66,3 +66,17 @@ class UserReviews():
                 returned_reviews.append(cls(**review))
 
         return returned_reviews
+
+    @classmethod
+    def get_all_reviews(cls):
+        reviews = list(mongo_db.db.reviews.aggregate(
+            [{"$sort": {"review_likes_count": -1}}]))
+
+        returned_reviews = []
+
+        if reviews is not None:
+
+            for review in reviews:
+                returned_reviews.append(cls(**review))
+
+        return returned_reviews
