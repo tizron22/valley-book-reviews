@@ -65,11 +65,11 @@
                                 class="fa-solid fa-thumbs-down fa-2x"></i></a>
                     </div>
                 </div>
-                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                <a href="{{ url_for('user_reviews.edit_review',review_id=reviews._id) }}">
                     <div class="row mx-2 my-4">
                         <button class="btn btn-success">Edit Review</button>
                     </div>
-                </form>
+                </a>
                 <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
                     <div class="row mx-2 my-4">
                         <button class="btn btn-danger">Delete Review</button>
@@ -99,12 +99,12 @@
                                 class="fa-solid fa-thumbs-down fa-2x"></i></a>
                     </div>
                 </div>
-                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                <a href="{{ url_for('user_reviews.edit_review', review_id=reviews._id) }}">
                     <div class="row mx-2 my-4">
                         <button class="btn btn-success">Edit Review</button>
                     </div>
-                </form>
-                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                </a>
+                <form method="POST" action="{{ url_for('user_reviews.delete_review', review_id=reviews._id) }}">
                     <div class="row mx-2 my-4">
                         <button class="btn btn-danger">Delete Review</button>
                     </div>
