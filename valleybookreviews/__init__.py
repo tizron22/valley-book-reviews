@@ -1,5 +1,6 @@
 
 from valleybookreviews.factory.initialisation import create_app
+from valleybookreviews.home.views import home
 from valleybookreviews.user.views import user_accounts, login_manager
 from valleybookreviews.reviews.views import user_reviews
 
@@ -8,6 +9,7 @@ from valleybookreviews.reviews.views import user_reviews
 app = create_app()
 
 # Register the Blueprints to FLask
+app.register_blueprint(home)
 app.register_blueprint(user_accounts)
 app.register_blueprint(user_reviews)
 
