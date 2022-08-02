@@ -34,6 +34,8 @@
 
 **Valley Book Reviews**
 
+Valley Book Reviews is a web application that allows you to create, read, update and delete your own book reviews along side being able to vote on other peoples reviews.
+
 ---
 
 # UX
@@ -43,8 +45,12 @@
 ### Stakeholder Requirements
 
 > #### **External Users**
+>
+> As a user, I would like an app where I'll be able to compare book reviews from other readers have already read and can see which ones are popular among other people. Being able to vote on the reviews or specific books will allow me see which ones are actually popular and recommended rather than just reading a bio from a sellers site which may not be genuie. Having a system where I can create, read, update and delete reviews would allow me to engage with the app.
 
 > #### **Site Owner**
+>
+> As the site owner, I would like this site to be the go to where book enthusiasts go to either write thier reviews or look for a new recommendation to read. Having a voting system allows users to see others thoughts on certain books where each user can only like or dislike a specific review,
 
 ### User Stories
 
@@ -58,6 +64,18 @@
 ## Scope
 
 ### Requirements
+
+> Easy to Navigate and User Friendly
+>
+> - Straight forward and uncomplicated view.
+
+> Reuseability
+>
+> - Users must be able to submit, edit, delete and read multiple reviews they've submitted.
+
+> Limited functionality without an account
+>
+> - Unless users register for an account, they are only able to read reviews and not able to like/dislike reviews.
 
 ## Structure
 
