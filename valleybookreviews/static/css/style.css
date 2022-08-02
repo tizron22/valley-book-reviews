@@ -56,6 +56,23 @@ nav ul{
     width: auto;
 }
 
+.login-form{
+    width: 90%;
+    height: 275px;
+}
+
+.library_hero_image{
+    background: url(https://www.city.ac.uk/__data/assets/image/0004/588001/varieties/breakpoint-max.jpg)
+    no-repeat
+    center
+    center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* Footer */
 
 .facebook-bg{
