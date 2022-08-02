@@ -1,3 +1,8 @@
+.nav-bar-position{
+    position: fixed;
+    width: 100%;
+}
+
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -32,9 +37,13 @@ nav ul{
     list-style: none;
 }
 
+.side-bar-position{
+    position: fixed;
+}
+
 .side-bar{
     width: 280px;
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 .side-bar-cross{
@@ -49,6 +58,12 @@ nav ul{
 .side-bar-cross:hover{
     background-color: grey;
     transform: scale(0.7);
+}
+
+.white-line{
+    display: flex; 
+    height: 57px;
+    z-index: 900;
 }
 
 .book-image{
