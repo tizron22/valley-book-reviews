@@ -1,29 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="library_hero_image d-flex">
-    <div class="container my-4 border rounded bg-dark bg-opacity-75">
-        <h1 class="my-4 text-center text-white">Welcome to Valley Books Reviews</h1>
-        <div
-            class="container bg-light d-flex flex-column justify-content-around m-1 p-2 border border-secondary rounded">
-            <div class="row d-flex text-center">
-                <h4>{{ random_review.book_name }} - <em>{{ random_review.author_name }}</em></h4>
-            </div>
-            <div class="d-lg-flex justify-content-center align-items-center review-box text-center">
-                <div class="col-4">
-                    <img class="book-image" src="{{ random_review.image_link }}" alt="{{ random_review.book_name }}">
+<section class="library_hero_image">
+    <div class="d-lg-flex justify-content-around review-box">
+        <div class="container my-4 border rounded bg-dark bg-opacity-75">
+            <h1 class="my-4 text-center text-white">Welcome to Valley Books Reviews</h1>
+            <div
+                class="container bg-light d-flex flex-column justify-content-around m-1 p-2 border border-secondary rounded">
+                <div class="row d-flex text-center">
+                    <h4>{{ random_review.book_name }} - <em>{{ random_review.author_name }}</em></h4>
                 </div>
-                <div class="col-7 h-100 d-flex align-items-center justify-content-center">
-                    <p>{{ random_review.review_text }}</p>
+                <div class="d-lg-flex justify-content-center align-items-center review-box text-center">
+                    <div class="col-4">
+                        <img class="book-image" src="{{ random_review.image_link }}"
+                            alt="{{ random_review.book_name }}">
+                    </div>
+                    <div class="col-7 h-100 d-flex align-items-center justify-content-center">
+                        <p>{{ random_review.review_text }}</p>
+                    </div>
                 </div>
             </div>
+            {% if not current_user.is_authenticated %}
+            <div class="d-flex m-2 justify-content-center">
+                <a href="{{ url_for('user_accounts.login') }}"><button class="btn btn-secondary">Click here to
+                        Login</button></a>
+            </div>
+            {% endif %}
         </div>
-        {% if not current_user.is_authenticated %}
-        <div class="d-flex justify-content-center">
-            <a href="{{ url_for('user_accounts.login') }}"><button class="btn btn-secondary">Click here to
-                    Login</button></a>
-        </div>
-        {% endif %}
     </div>
 </section>
 
