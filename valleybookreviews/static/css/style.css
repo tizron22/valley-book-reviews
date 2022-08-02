@@ -73,3 +73,19 @@ nav ul{
 .github-bg{
     background-color: #333333;
 }
+
+
+@media screen and (max-width:992px){
+    .review-box{
+        display: flex!important;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .col-2, .col-7{
+        flex: inherit;
+        width: inherit;
+    }
+    
+}
