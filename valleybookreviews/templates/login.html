@@ -1,20 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>The Login Page</h1>
-
-<form method="POST" action="">
-    <div>
-        <input id="userLogin" type="text" name="userLogin" required>
-        <label for="userLogin">Username</label>
+<section class="library_hero_image">
+    <div class="container my-4 border rounded bg-light">
+        <h1 class="d-flex justify-content-around my-4 text-center">Enter your details below to login</h1>
+        <form method="POST" action=""
+            class="login-form container my-4 bg-secondary bg-opacity-50 border border-secondary rounded">
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="userLogin" class="fw-semibold">Username:</label>
+                <input id="userLogin" type="text" name="userLogin" required>
+            </div>
+            <div class="d-flex justify-content-evenly mt-4">
+                <label for="userpassword" class="fw-semibold">Password:</label>
+                <input id="userpassword" type="password" name="userpassword" required>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="loginButton btn btn-success" type="submit" name="action">Login</button>
+            </div>
+            <div class="p-1 m-2">
+                <a href="{{ url_for('user_accounts.register') }}"
+                    class="d-flex fw-md-semibold text-center flex-wrap justify-content-center align-items-center">Click
+                    here to
+                    reigister
+                    for an
+                    account.</a>
+            </div>
+        </form>
     </div>
-    <div>
-        <input id="userpassword" type="password" name="userpassword" required>
-        <label for="userpassword">Password</label>
-    </div>
-    <button class="loginButton" type="submit" name="action">Login</button>
-
-</form>
-
+</section>
 
 {% endblock %}
