@@ -139,6 +139,12 @@
 >
 > - [Python Flask Authentication Tutorial - Learn Flask Login](https://www.youtube.com/watch?v=71EU8gnZqZQ)
 
+### Pictures
+
+> Library Photo
+>
+> - Photo by [City University of London](https://www.city.ac.uk/__data/assets/image/0004/588001/varieties/breakpoint-max.jpg) on Unsplash.
+
 ---
 
 # Acknowledgements
