@@ -3,7 +3,7 @@
 
 <!-- My Review input elements -->
 <section class="d-flex justify-content-around">
-    <div class="container d-flex justify-content-center justify-content-around m-1 p-2 border border-secondary rounded">
+    <div class="container d-flex justify-content-around m-1 p-2 border border-secondary rounded">
         <form method="POST" action="" id="myReviewForm">
             <div class="row">
                 <div class="d-flex flex-column col-sm m-0">
@@ -26,13 +26,15 @@
                             placeholder="Please Enter Review here..." required></textarea>
                     </div>
                 </div>
-                <div class="col-sm d-flex justify-content-center align-items-center">
-                    <button class="loginButton" type="submit" name="action">Submit Review</button>
+                <div class="col-sm d-flex align-items-center">
+                    <button class="btn btn-success loginButton" type="submit" name="action">Submit Review</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
+
+
 
 {% for reviews in submited_user_reviews %}
 
@@ -47,26 +49,30 @@
             <div class="col-2">
                 <img class="book-image" src="{{ reviews.image_link }}" alt="{{ reviews.book_name }}">
             </div>
-            <div class="col-7 text-center">
+            <div class="col-7 h-100 d-flex align-items-center justify-content-center">
                 <p>{{ reviews.review_text }}</p>
             </div>
             <div class="col-2">
                 <div class="row d-flex justify-content-between text-center">
-                    <div class="col-4 align-items-center">
+                    <div class="col-4 d-flex flex-column justify-content-center">
                         <span>0</span>
                         <i class="fa-solid fa-thumbs-up fa-2x"></i>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 d-flex flex-column justify-content-center">
                         <span>0</span>
                         <i class="fa-solid fa-thumbs-down fa-2x"></i>
                     </div>
                 </div>
-                <div class="row mx-2 my-4">
-                    <button class="btn btn-success">Edit Review</button>
-                </div>
-                <div class="row mx-2 my-4">
-                    <button class="btn btn-danger">Delete Review</button>
-                </div>
+                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                    <div class="row mx-2 my-4">
+                        <button class="btn btn-success">Edit Review</button>
+                    </div>
+                </form>
+                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                    <div class="row mx-2 my-4">
+                        <button class="btn btn-danger">Delete Review</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -80,23 +86,27 @@
         <div class="d-flex justify-content-around">
             <div class="col-2">
                 <div class="row d-flex justify-content-between text-center">
-                    <div class="col-4 align-items-center">
+                    <div class="col-4  d-flex flex-column justify-content-center">
                         <span>0</span>
                         <i class="fa-solid fa-thumbs-up fa-2x"></i>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 d-flex flex-column justify-content-center">
                         <span>0</span>
                         <i class="fa-solid fa-thumbs-down fa-2x"></i>
                     </div>
                 </div>
-                <div class="row mx-2 my-4">
-                    <button class="btn btn-success">Edit Review</button>
-                </div>
-                <div class="row mx-2 my-4">
-                    <button class="btn btn-danger">Delete Review</button>
-                </div>
+                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                    <div class="row mx-2 my-4">
+                        <button class="btn btn-success">Edit Review</button>
+                    </div>
+                </form>
+                <form method="POST" action="{{ url_for('user_reviews.delete_review',review_id=reviews._id) }}">
+                    <div class="row mx-2 my-4">
+                        <button class="btn btn-danger">Delete Review</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-7 text-center">
+            <div class="col-7 h-100 d-flex align-items-center justify-content-center">
                 <p>{{ reviews.review_text }}</p>
             </div>
             <div class="col-2">
