@@ -23,7 +23,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="nav-bar-position">
             <div class="nav-wrapper nav-bar text-white bg-dark">
                 <div id="hamburgerMenuSelector" class="nav-icons">
                     <i class="fa-solid fa-bars"></i>
@@ -46,8 +46,7 @@
         </nav>
     </header>
 
-    <section>
-
+    <aside class="side-bar-position">
         <!-- Side bar -->
         <div id="sideBar" class="d-none flex-column flex-shrink-0 p-3 text-white bg-dark side-bar">
             <div id="openSidebarCross" class="d-flex justify-content-end">
@@ -78,7 +77,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </aside>
+
+    <div class="white-line"></div>
 
     {% block content %}
     {% endblock %}
