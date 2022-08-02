@@ -80,3 +80,31 @@ class UserReviews():
                 returned_reviews.append(cls(**review))
 
         return returned_reviews
+
+    def add_review_like(self, user_id):
+
+        self.review_likes_users.append(user_id)
+        self.review_likes_count += 1
+        mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
+                                       "$set": self.get_db_info()})
+
+    def add_review_dislike(self, user_id):
+
+        self.review_dislikes_users.append(user_id)
+        self.review_dislikes_count += 1
+        mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
+                                       "$set": self.get_db_info()})
+
+    def remove_review_like(self, user_id):
+
+        self.review_likes_users.pop(user_id)
+        self.review_likes_count += -1
+        mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
+                                       "$set": self.get_db_info()})
+
+    def remove_review_dislike(self, user_id):
+
+        self.review_dislikes_users.pop(user_id)
+        self.review_dislikes_count += -1
+        mongo_db.db.reviews.update_one({"_id": ObjectId(self._id)}, {
+                                       "$set": self.get_db_info()})
