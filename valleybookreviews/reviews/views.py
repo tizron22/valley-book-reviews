@@ -35,6 +35,21 @@ def myreviews():
     return render_template("myreviews.html", submited_user_reviews=submited_user_reviews)
 
 
+@user_reviews.route("/edit_review/<review_id>", methods=["GET", "POST"])
+@login_required
+def edit_review(review_id):
+    review_id = UserReviews.get_reviews_id(review_id)
+
+    if request.method == "POST":
+        review_id.edit_user_review(book_name=request.form.get("bookName"),
+                                   author_name=request.form.get("authorName"),
+                                   image_link=request.form.get("imageLink"),
+                                   review_text=request.form.get("reviewText"))
+        return redirect(url_for("user_reviews.myreviews"))
+
+    return render_template("editreview.html", review_id=review_id)
+
+
 @user_reviews.route("/delete_review/<review_id>", methods=["GET", "POST"])
 @login_required
 def delete_review(review_id):
