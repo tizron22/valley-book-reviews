@@ -42,3 +42,48 @@ def delete_review(review_id):
     if request.method == "POST":
         UserReviews.delete_user_review(review_id)
         return redirect(url_for("user_reviews.myreviews"))
+
+
+@user_reviews.route("/add_like/<review_id>")
+@login_required
+def add_like(review_id):
+
+    liked_review = UserReviews.get_reviews_id(review_id)
+
+    if current_user.is_authenticated:
+
+        if current_user.user_name in liked_review.get_db_info()['review_likes_users']:
+            print("You already liked the Review")
+        elif current_user.user_name in liked_review.get_db_info()["review_dislikes_users"]:
+            dislike_index = liked_review.get_db_info(
+            )["review_dislikes_users"].index(current_user.user_name)
+            liked_review.remove_review_dislike(dislike_index)
+            liked_review.add_review_like(current_user.user_name)
+            return redirect(url_for("user_reviews.allreviews"))
+        else:
+            liked_review.add_review_like(current_user.user_name)
+            return redirect(url_for("user_reviews.allreviews"))
+
+    return redirect(url_for("user_reviews.allreviews", review_id=liked_review.get_review_id))
+
+
+@user_reviews.route("/add_dislike/<review_id>")
+@login_required
+def add_dislike(review_id):
+
+    disliked_review = UserReviews.get_reviews_id(review_id)
+
+    if current_user.user_name in disliked_review.get_db_info()["review_dislikes_users"]:
+        print("You already disliked the Review")
+    elif current_user.user_name in disliked_review.get_db_info()["review_likes_users"]:
+        like_index = disliked_review.get_db_info(
+        )["review_likes_users"].index(current_user.user_name)
+        disliked_review.remove_review_like(like_index)
+        disliked_review.add_review_dislike(current_user.user_name)
+        return redirect(url_for("user_reviews.allreviews"))
+
+    else:
+        disliked_review.add_review_dislike(current_user.user_name)
+        return redirect(url_for("user_reviews.allreviews"))
+
+    return redirect(url_for("user_reviews.allreviews", review_id=disliked_review.get_review_id))
