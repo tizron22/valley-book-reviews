@@ -79,6 +79,43 @@ Valley Book Reviews is a web application that allows you to create, read, update
 
 ## Structure
 
+> ### Base Sheet
+>
+> Includes a nav bar which contains a hamburger menu selector, site name and user account to register or log into the site.
+> When the hamburger menu is clicked a side bar shows that allows the user to navigate around the site.
+> Includes footer which holds the social media links for the user to connect with us.
+
+> ### index Sheet
+>
+> Includes a container that holds a welcome message and a random review to intrigue user interest.
+> If the user isn't logged in a button will show allowing users to navigate to enable full functionality.
+
+> ### About Sheet
+>
+> Includes a brief description of what the site is about.
+
+> ### My Reviews Sheet
+>
+> Includes a section where users are able to submit new reivews.
+> The user is also able to review thier previous submissions and either edit, vote or delete them.
+
+> ### All Reviews Sheet
+>
+> All users who access this sheet is able to see each review that has been submitted.
+> Only logged in users are able to vote and see the voting options.
+
+> ### Edit Reviews Sheet
+>
+> Users are taken to a new sheet where they are able to edit the selected review details before re-submitting it.
+
+> ### Login Sheet
+>
+> Includes a container where users are able to login after they've registered for an account.
+
+> ### Register Sheet
+>
+> Includes a container where the user is able to register for an account to fully access the app.
+
 ---
 
 ## Skeleton
