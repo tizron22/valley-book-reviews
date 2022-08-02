@@ -69,6 +69,14 @@ class UserReviews():
         return returned_reviews
 
     @classmethod
+    def get_random_review(cls):
+        review = list(mongo_db.db.reviews.aggregate(
+            [{"$sample": {"size": 1}}]))
+        if review != []:
+            review = cls(**review[0])
+        return review
+
+    @classmethod
     def get_all_reviews(cls):
         reviews = list(mongo_db.db.reviews.aggregate(
             [{"$sort": {"review_likes_count": -1}}]))
