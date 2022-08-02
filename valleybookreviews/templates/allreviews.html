@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for reviews in all_submited_reviews %}
+
+<section class="d-lg-flex justify-content-around review-box">
+    {% if loop.index % 2 != 0 %}
+
+    <div class="container d-flex flex-column justify-content-around m-1 p-2 border border-secondary rounded">
+        <div class="row d-flex text-center">
+            <h4>{{ reviews.book_name }} - <em>{{ reviews.author_name }}</em></h4>
+        </div>
+        <div class="d-lg-flex justify-content-around review-box">
+            <div class="col-2">
+                <img class="book-image" src="{{ reviews.image_link }}" alt="{{ reviews.book_name }}">
+            </div>
+            <div class="col-7 h-100 d-flex align-items-center justify-content-center">
+                <p>{{ reviews.review_text }}</p>
+            </div>
+            <div class="col-2">
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col-4 d-flex flex-column justify-content-center">
+                        <span>0</span>
+                        <i class="fa-solid fa-thumbs-up fa-2x"></i>
+                    </div>
+                    <div class="col-4 d-flex flex-column justify-content-center">
+                        <span>0</span>
+                        <i class="fa-solid fa-thumbs-down fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+
+    <div class="container d-flex flex-column justify-content-around m-1 p-2 border border-secondary rounded">
+        <div class="row d-flex text-center">
+            <h4>{{ reviews.book_name }} - <em>{{ reviews.author_name }}</em></h4>
+        </div>
+        <div class="d-lg-flex justify-content-around review-box">
+            <div class="col-2">
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col-4 d-flex flex-column justify-content-center">
+                        <span>0</span>
+                        <i class="fa-solid fa-thumbs-up fa-2x"></i>
+                    </div>
+                    <div class="col-4 d-flex flex-column justify-content-center">
+                        <span>0</span>
+                        <i class="fa-solid fa-thumbs-down fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 h-100 d-flex align-items-center justify-content-center">
+                <p>{{ reviews.review_text }}</p>
+            </div>
+            <div class="col-2">
+                <img class="book-image" src="{{ reviews.image_link }}" alt="{{ reviews.book_name }}">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+{% endfor %}
+
+{% endblock %}
