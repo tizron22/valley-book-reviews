@@ -5,6 +5,14 @@ from valleybookreviews.reviews.classes import UserReviews
 user_reviews = Blueprint('user_reviews', __name__)
 
 
+@user_reviews.route("/allreviews", methods=["GET", "POST"])
+def allreviews():
+
+    all_submited_reviews = UserReviews.get_all_reviews()
+
+    return render_template("allreviews.html", all_submited_reviews=all_submited_reviews)
+
+
 @user_reviews.route("/myreviews", methods=["GET", "POST"])
 @login_required
 def myreviews():
