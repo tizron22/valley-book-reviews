@@ -113,7 +113,7 @@ nav ul{
         align-items: center;
     }
 
-    .col-2, .col-7{
+    .col-2, .col-4, .col-7{
         flex: inherit;
         width: inherit;
     }
