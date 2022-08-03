@@ -57,11 +57,12 @@
                     {% else %}
                     <li class="py-2 account"><a href="{{ url_for('user_accounts.login') }}" class="text-white">Login</a>
                     </li>
-                    <a href="{{ url_for('user_accounts.register') }}" class="text-white">
-                        <li class="py-2 account">
+                    <li class="py-2 account">
+                        <a href="{{ url_for('user_accounts.register') }}" class="text-white">
                             Register
-                        </li>
-                    </a>
+                        </a>
+                    </li>
+
                     {% endif %}
                 </ul>
             </div>
