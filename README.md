@@ -2,7 +2,7 @@
 
 ---
 
-![Site Responsiveness](./valley-book-reviews/static/img/am-i-response-pic.jpg)
+![Site Responsiveness](./valleybookreviews/static/img/am-i-response-pic.jpg)
 
 [Click here to view website on Heroku](https://valley-book-reviews.herokuapp.com/)
 
@@ -124,16 +124,16 @@ Valley Book Reviews is a web application that allows you to create, read, update
 
 ### Wireframes
 
-> - [Base Web Page Wireframe](./valley-book-reviews/static/wireframes/base-web.pdf)
-> - [Base Mobile Page Wireframe](./valley-book-reviews/static/wireframes/base-mobile.pdf)
-> - [Base Web Menus Page Wireframe](./valley-book-reviews/static/wireframes/base-web-menus.pdf)
-> - [Base Mobile Menus Page Wireframe](./valley-book-reviews/static/wireframes/base-mobile-menus.pdf)
-> - [Home Content Page Wireframe](./valley-book-reviews/static/wireframes/home-content.pdf)
-> - [About Content Page Wireframe](./valley-book-reviews/static/wireframes/about-content.pdf)
-> - [My Reviews Content Page Wireframe](./valley-book-reviews/static/wireframes/my-reviews-content.pdf)
-> - [All Reviews Content Page Wireframe](./valley-book-reviews/static/wireframes/all-reviews-content.pdf)
-> - [My Account Content Page Wireframe](./valley-book-reviews/static/wireframes/my-account-content.pdf)
-> - [My Account Register Content Page Wireframe](./valley-book-reviews/static/wireframes/my-account-register-content.pdf)
+> - [Base Web Page Wireframe](./valleybookreviews/static/wireframes/base-web.pdf)
+> - [Base Mobile Page Wireframe](./valleybookreviews/static/wireframes/base-mobile.pdf)
+> - [Base Web Menus Page Wireframe](./valleybookreviews/static/wireframes/base-web-menus.pdf)
+> - [Base Mobile Menus Page Wireframe](./valleybookreviews/static/wireframes/base-mobile-menus.pdf)
+> - [Home Content Page Wireframe](./valleybookreviews/static/wireframes/home-content.pdf)
+> - [About Content Page Wireframe](./valleybookreviews/static/wireframes/about-content.pdf)
+> - [My Reviews Content Page Wireframe](./valleybookreviews/static/wireframes/my-reviews-content.pdf)
+> - [All Reviews Content Page Wireframe](./valleybookreviews/static/wireframes/all-reviews-content.pdf)
+> - [My Account Content Page Wireframe](./valleybookreviews/static/wireframes/my-account-content.pdf)
+> - [My Account Register Content Page Wireframe](./valleybookreviews/static/wireframes/my-account-register-content.pdf)
 
 ## Surface
 
