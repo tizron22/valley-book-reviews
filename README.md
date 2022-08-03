@@ -278,18 +278,17 @@ This project was deployed to Heroku via the following steps:
 > - IP : 0.0.0.0
 > - PORT : 5500
 > - MONGO_URI
->   > This variable can be provided from MongoDB by following these steps:
->   >
->   > 1. Log in to [MongoDB](https://www.mongodb.com/).
->   > 2. Under Data Storage click on Clusters.
->   > 3. For the Cluster that you would like to connect to, click the Connect button.
->   > 4. Click on Connect your Application.
->   > 5. Select Python, and Version 3.6 or Later.
->   > 6. Copy the connection string, replacing `<password>` with your MongoDB password, and `valleyBookReviews` with the name of the MongoDB Collection (Database) you would like to connect to.
+>   - This variable can be provided from MongoDB by following these steps:
+>     - 1.  Log in to [MongoDB](https://www.mongodb.com/).
+>     - 2.  Under Data Storage click on Clusters.
+>     - 3. For the Cluster that you would like to connect to, click the Connect button.
+>     - 4. Click on Connect your Application.
+>     - 5. Select Python, and Version 3.6 or Later.
+>     - 6. Copy the connection string, replacing `<password>` with your MongoDB password, and `valleyBookReviews` with the name of the MongoDB Collection (Database) you would like to connect to.
 > - MONGO_DBNAME
-> - The name of the Database you are connecting to.
+>   - The name of the Database you are connecting to.
 > - SECRET_KEY
-> - A random sequence of characters, this is required for maintaining session security in Flask. One way of getting a Secret Key is through [RandomKeygen](https://randomkeygen.com/).
+>   - A random sequence of characters, this is required for maintaining session security in Flask. One way of getting a Secret Key is through [RandomKeygen](https://randomkeygen.com/).
 
 ## Running this project from your Browser or Locally
 
