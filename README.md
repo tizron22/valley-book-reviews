@@ -2,6 +2,8 @@
 
 ---
 
+![Site Responsiveness](./valley-book-reviews/static/img/am-i-response-pic.jpg)
+
 [Click here to view website on Heroku](https://valley-book-reviews.herokuapp.com/)
 
 ---
