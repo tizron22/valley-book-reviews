@@ -21,27 +21,36 @@ The README documentation can be found here:- [README.md](./README.md)
 > As a potential new user, I would like the site to be easily usable, understandable and user friendly.
 >
 > - The website utilizing familiar icons commonly used on websites such as user for account details and hamburger menu for more options.
-> - The website has a simple format which reduces the amount of noise that could distract the user whilst playing.
+> - The website has a simple uncomplicated format which allows users further access once they have logged into thier accont.
 
 > As a new user, I would like to be able to register an account to be able to use the site.
 >
-> -
+> - Once the user lands on the home page, there is a button for logging in or in the top right corner there is a user icon once clicked provides a menu to either register or login.
+> - If the user clicks logon a click is available on the bottom that allows new users to be re-directed to the registeration sheet.
 
 > As a current user, I would like to be able to submit new and vote on exisiting reviews on the site.
 >
-> -
+> - Once the user has logged in, the My Reviews page becomes available to them and at the top they are able to submit their own reviews.
+> - In addition to the My Reviews page becoming available, the voting options will show in the 'My Reviews' and 'All Reviews' sheets.
 
 > As a returning user, I would like to be able to edit or delete previous reviews that I submitted on the site.
 >
-> - Once the user
+> - Once the user has submitted a form, on the 'My Review' sheet next to each review they are able to edit or delete any review they have created.
 
 ---
 
 # Feature Testing
 
-| Feature           | Outcome           | Additional Comments                                                                                                                 |
-| :---------------- | :---------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| Game Instructions | Works as intended | On clicking the question mark icon, it brings up the model and unable to click away until clicking the x or lets paly game buttons. |
+| Feature            | Outcome           | Additional Comments                                                                                                                                                           |
+| :----------------- | :---------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Side Bar           | Works as intended | On clicking the hamburger menu the side bar goes from left to right to provide more site options.                                                                             |
+| Register Account   | Works as intended | On registering for a new account, users details are passed and stored into the database.                                                                                      |
+| Log Into Account   | Works as intended | On inputting the correct login details the user is able to access the voting system and my reviews.                                                                           |
+| Create New Reviews | Works as intended | The user is able to create a new review, once submited is stored on the db.                                                                                                   |
+| Read Reviews       | Works as intended | Users are able to read all reviews submitted on All Reviews or see just thier own on My Reviews.                                                                              |
+| Update Own Reviews | Works as intended | Users on the My Review sheet are able to update thier own reviews as once the button is clicked they are redirected to a new sheet where they are able to change the details. |
+| Delete Reviews     | Works as intended | Should the user wish, on the My Revieew sheet they are able to delete previously submitted reviews.                                                                           |
+| Voting on Reviews  | Works as intended | Users are able to vote either like or dislike on any reviews including thier own, they are able to do this on My Reviews or All reviews.                                      |
 
 # Browser Testing
 
@@ -76,7 +85,7 @@ The README documentation can be found here:- [README.md](./README.md)
 
 4.[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) - Testing
 
-![Google Lighthouse Performance](./assets/images/googleLighthouseImage.jpg)
+![Google Lighthouse Performance](./valley-book-reviews/static/img/googleLighthouseImage.jpg)
 
 5.[WAVE](https://wave.webaim.org/) - Testing
 
