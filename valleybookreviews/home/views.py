@@ -9,3 +9,9 @@ def index():
 
     random_review = UserReviews.get_random_review()
     return render_template("index.html", random_review=random_review)
+
+
+@home.route('/about')
+def about():
+
+    return render_template("about.html",)
