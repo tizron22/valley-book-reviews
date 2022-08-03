@@ -127,4 +127,7 @@ nav ul{
         width: inherit;
     }
     
+    .small-screen-margin{
+        margin-top: 20px!important;
+    }
 }
