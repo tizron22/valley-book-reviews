@@ -49,12 +49,21 @@
                 </div>
             </div>
             <div id="accountMenu" class="d-none">
-                <ul class="bg-secondary text-dark">
+                <ul class="bg-secondary bg-dark">
                     {% if current_user.is_authenticated %}
-                    <li><a href="{{ url_for('user_accounts.logout') }}">Logout</a></li>
+                    <li class="py-2 account"><a href="{{ url_for('user_accounts.logout') }}"
+                            class="text-white">Logout</a>
+                    </li>
                     {% else %}
-                    <li><a href="{{ url_for('user_accounts.login') }}">Login</a></li>
-                    <li><a href="{{ url_for('user_accounts.register') }}">Register</a></li>
+                    <a href="{{ url_for('user_accounts.login') }}" class="text-white">
+                        <li class="py-2 account">Login
+                        </li>
+                    </a>
+                    <a href="{{ url_for('user_accounts.register') }}" class="text-white">
+                        <li class="py-2 account">
+                            Register
+                        </li>
+                    </a>
                     {% endif %}
                 </ul>
             </div>
