@@ -65,6 +65,10 @@ nav ul{
     transform: scale(0.7);
 }
 
+.side-bar-option:hover{
+    background-color: grey;
+}
+
 .white-line{
     display: flex; 
     height: 57px;
