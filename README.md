@@ -137,7 +137,21 @@ Valley Book Reviews is a web application that allows you to create, read, update
 
 ## Surface
 
----
+> ### Colour Scheme
+>
+> When choosing a colour scheme, the aim was to have a simple view that would not distract the user from the content.
+>
+> The Primary colours used are:-
+>
+> - Background = rgb(255,255,255)
+> - Header = rgb(33,37,41)
+> - Footer = rgb(248,249,250)
+>
+> When the colours where selected, I then compared the contrast ratio between the various colors to ensure the site would obtain a [WCAG](https://webaim.org/resources/contrastchecker/) `AAA rating` and to confirm that the content of the site would be easily distinguishable from the background for users.
+>
+> ## Comparing the background to the Header/Side Bar
+>
+> ![WCAG Rating Background vs Tile Area](./valleybookreviews/static/img/contrast-checker.jpg)
 
 ## Features
 
@@ -177,6 +191,8 @@ Valley Book Reviews is a web application that allows you to create, read, update
 
 ### Future Feature Considerations
 
+Should I have had more time, I would have liked to have been able to include the following features into my project.
+
 > ### Search Bar
 >
 > - As the application begins to grow, add the ability for users to seach for specific reviews or certain reviews from certain users.
@@ -185,13 +201,23 @@ Valley Book Reviews is a web application that allows you to create, read, update
 >
 > - As the application grows, include options on the All reviews sheet to allow users to filter and sort reviews by various metrics.
 
-> ### Follow User
->
-> - Allow users to follow specific accounts to recieve updates when the user has submitted a review.
-
 > ### My Account Details
 >
 > - Allowing users to fully edit the account details after submitting them.
+
+> ### Password Check
+>
+> - When the user submits an incorrect password to send them a message adivising them of the incorrect input.
+
+> ### Url Validation
+>
+> - If an incorrect Url path has been inputted to feed this back to the user.
+
+The following features I would have liked to add at a future date.
+
+> ### Follow User
+>
+> - Allow users to follow specific accounts to recieve updates when the user has submitted a review.
 
 ---
 
