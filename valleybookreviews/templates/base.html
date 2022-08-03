@@ -55,10 +55,8 @@
                             class="text-white">Logout</a>
                     </li>
                     {% else %}
-                    <a href="{{ url_for('user_accounts.login') }}" class="text-white">
-                        <li class="py-2 account">Login
-                        </li>
-                    </a>
+                    <li class="py-2 account"><a href="{{ url_for('user_accounts.login') }}" class="text-white">Login</a>
+                    </li>
                     <a href="{{ url_for('user_accounts.register') }}" class="text-white">
                         <li class="py-2 account">
                             Register
@@ -95,7 +93,7 @@
                     {% endif %}
                 </li>
                 <li>
-                    <a href="{{ url_for('user_reviews.allreviews') }}"" class=" nav-link text-white">
+                    <a href="{{ url_for('user_reviews.allreviews') }}" class="nav-link text-white">
                         All Reviews
                     </a>
                 </li>
