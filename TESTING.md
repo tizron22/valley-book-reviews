@@ -85,7 +85,7 @@ The README documentation can be found here:- [README.md](./README.md)
 
 4.[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) - Testing
 
-![Google Lighthouse Performance](./valley-book-reviews/static/img/googleLighthouseImage.jpg)
+![Google Lighthouse Performance](./valleybookreviews/static/img/googleLighthouseImage.jpg)
 
 5.[WAVE](https://wave.webaim.org/) - Testing
 
