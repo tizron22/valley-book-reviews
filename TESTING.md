@@ -95,7 +95,15 @@ The README documentation can be found here:- [README.md](./README.md)
 
 # Significant Bugs
 
+> ## Image URL Validation
 >
+> - When submitting a new review, users are able to input any text into the field which results in an error when looking to import he image to use in the review sheets.
+> - Need to create either a JavaScript or Python soultion where it validates the url to make sure it's a vaild link for an image.
+
+> ## Incorrect Password - `When Logging into the site`
+>
+> - When logged into the site, if an incorrect password is submitted the site attempts to redirect the users to 'My Reviews' but are not logged in.
+> - Need to create validation logic that will check to see if the user has inputted a correct password if not will pass that back to the user to advise them without redirecting to the new sheet.
 
 ---
 
