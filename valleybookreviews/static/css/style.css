@@ -37,6 +37,11 @@ nav ul{
     list-style: none;
 }
 
+.account:hover{
+    background-color: grey;
+    transform: scale(0.8);
+}
+
 .side-bar-position{
     position: fixed;
 }
