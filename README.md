@@ -141,6 +141,56 @@ Valley Book Reviews is a web application that allows you to create, read, update
 
 ### Existing Features
 
+> ### Side Bar
+>
+> - Fully Functioning side bar that allows users to navigate the applications.
+
+> ### Register New Account
+>
+> - Users are able to create an account to use the application fully.
+
+> ### Log Into Account
+>
+> - Once an account has been created, users are able to log into the account.
+
+> ### Create New Reviews
+>
+> - Users are able to create new reviews to be added to the database.
+
+> ### Read Reviews
+>
+> - Users are able to read exisiting reviews that have already been added to the database.
+
+> ### Update Own Reviews
+>
+> - Users are able to update thier own reviews which will be updated to the database.
+
+> ### Delete Reviews
+>
+> - Users are able to delete thier own reviews from the database.
+
+> ### Voting on Reviews
+>
+> - Users are able to vote on any review if they like or dislike it at any time.
+
+### Future Feature Considerations
+
+> ### Search Bar
+>
+> - As the application begins to grow, add the ability for users to seach for specific reviews or certain reviews from certain users.
+
+> ### Sorting by certain critera
+>
+> - As the application grows, include options on the All reviews sheet to allow users to filter and sort reviews by various metrics.
+
+> ### Follow User
+>
+> - Allow users to follow specific accounts to recieve updates when the user has submitted a review.
+
+> ### My Account Details
+>
+> - Allowing users to fully edit the account details after submitting them.
+
 ---
 
 ## Technologies Used
@@ -302,6 +352,12 @@ The project should automatically find this file, and read the necessary environm
 >
 > - [Flask Tutorial #6 - Blueprints and Views](https://www.youtube.com/watch?v=wC3qkE5vD4M)
 > - [Flask Tutorial #7 - Application Factory Function](https://www.youtube.com/watch?v=6c_utRUzHG4)
+
+> #### WYSPA
+>
+> Some ideas and thought processes used in this project was taken from WYPSA, file structure etc.
+>
+> - [WYSPA](https://github.com/BAK2K3/WYSPA)
 
 ### Pictures
 
