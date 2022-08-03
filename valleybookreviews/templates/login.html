@@ -6,22 +6,22 @@
         <h1 class="d-flex justify-content-around my-4 text-center">Enter your details below to login</h1>
         <form method="POST" action=""
             class="login-form container my-4 bg-secondary bg-opacity-50 border border-secondary rounded">
-            <div class="d-flex justify-content-evenly mt-4">
-                <label for="userLogin" class="fw-semibold">Username:</label>
-                <input id="userLogin" type="text" name="userLogin" required>
+            <div class="d-flex justify-content-evenly mt-4 row">
+                <label for="userLogin" class="fw-semibold col-2">Username:</label>
+                <input id="userLogin" class="col-2" type="text" name="userLogin" required>
             </div>
-            <div class="d-flex justify-content-evenly mt-4">
-                <label for="userpassword" class="fw-semibold">Password:</label>
-                <input id="userpassword" type="password" name="userpassword" required>
+            <div class="d-flex justify-content-evenly mt-4 row">
+                <label for="userpassword" class="fw-semibold col-2">Password:</label>
+                <input id="userpassword" class="col-2" type="password" name="userpassword" required>
             </div>
-            <div class="d-flex justify-content-center mt-5">
+            <div class="d-flex justify-content-center mt-5 small-screen-margin">
                 <button class="loginButton btn btn-success" type="submit" name="action">Login</button>
             </div>
             <div class="p-1 m-2">
                 <a href="{{ url_for('user_accounts.register') }}"
                     class="d-flex fw-md-semibold text-center flex-wrap justify-content-center align-items-center">Click
                     here to
-                    reigister
+                    register
                     for an
                     account.</a>
             </div>
