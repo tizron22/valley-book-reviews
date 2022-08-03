@@ -76,24 +76,24 @@
                 <i class="fa-solid fa-xmark side-bar-cross"></i>
             </div>
             <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="{{ url_for('home.index') }}" class="nav-link active" aria-current="page">
+                <li class="side-bar-option">
+                    <a href="{{ url_for('home.index') }}" class="nav-link text-white" aria-current="page">
                         Home
                     </a>
                 </li>
-                <li>
+                <li class="side-bar-option">
                     <a href="{{ url_for('home.about') }}" class="nav-link text-white">
                         About
                     </a>
                 </li>
-                <li>
+                <li class="side-bar-option">
                     {% if current_user.is_authenticated %}
                     <a href="{{ url_for('user_reviews.myreviews') }}" class="nav-link text-white">
                         My Reviews
                     </a>
                     {% endif %}
                 </li>
-                <li>
+                <li class="side-bar-option">
                     <a href="{{ url_for('user_reviews.allreviews') }}" class="nav-link text-white">
                         All Reviews
                     </a>
