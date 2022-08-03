@@ -22,8 +22,9 @@
             </div>
             {% if not current_user.is_authenticated %}
             <div class="d-flex m-2 justify-content-center">
-                <a href="{{ url_for('user_accounts.login') }}"><button class="btn btn-secondary">Click here to
-                        Login</button></a>
+                <button class="btn btn-secondary"><a href="{{ url_for('user_accounts.login') }}"
+                        class="text-white">Click here to
+                        Login</a></button>
             </div>
             {% endif %}
         </div>
