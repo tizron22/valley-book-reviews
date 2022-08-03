@@ -88,6 +88,11 @@ nav ul{
 
 /* Footer */
 
+.social-button{
+    width: 45px;
+    height: 40px;
+}
+
 .facebook-bg{
     background-color: #3b5998;
 }
